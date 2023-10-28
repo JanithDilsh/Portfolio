@@ -1,6 +1,6 @@
 # Portfolio
 
-Welcome to my portfolio! This repository showcases my skills, projects, and achievements as a [Your Profession/Field]. Here's a brief overview of what you'll find:
+Welcome to my portfolio! This repository showcases my skills, projects, and achievements as a Software Developer. Here's a brief overview about my portfolio:
 
 ## Technologies Used
 - HTML
