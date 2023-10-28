@@ -70,4 +70,36 @@ $(document).ready(function(){
             }
         }
     });
+
+    $(document).ready(function(){
+        // ... (your existing code for other functionalities)
+    
+        // Contact form submission script
+        $('.contact form').submit(function(event){
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get form input values
+            var name = $('.field.name input').val();
+            var email = $('.field.email input').val();
+            var subject = $('.field input[placeholder="Subject"]').val();
+            var message = $('.field.textarea textarea').val();
+            
+            // Here, you can add validation for the inputs if needed
+            
+            // Create a message for the user
+            var confirmationMessage = `Thank you, ${name}! Your message has been sent.`;
+            
+            // Display the confirmation message
+            $('.contact form').append('<div class="confirmation-message">' + confirmationMessage + '</div>');
+            
+            // Reset the form after submission
+            $('.contact form')[0].reset();
+            
+            // Optional: If you want to remove the confirmation message after a few seconds
+            setTimeout(function() {
+                $('.contact form .confirmation-message').remove();
+            }, 5000); // Confirmation message will be removed after 5 seconds
+        });
+    });
+    
 });
